@@ -1,0 +1,93 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:18:1-40:12
+	package
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:19:5-47
+	xmlns:android
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:18:11-69
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:21:5-65
+	android:name
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:21:22-62
+uses-feature#android.hardware.camera
+ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:23:5-60
+	android:name
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:23:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:24:5-70
+	android:name
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:24:19-67
+application
+ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:26:5-38:19
+MERGED from [com.android.support:support-v13:25.3.1] C:\Users\djerb\.android\build-cache\c4ea94314dd1dd2fd1598732e49a5d5926b55f5f\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\djerb\.android\build-cache\0adeb6ce4f853c5562fc0f2ca06ef793c88f8533\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\djerb\.android\build-cache\5bac31b6edf8968bd9b93a174d37a57177bec152\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\djerb\.android\build-cache\24cc1948e743eb539c149c53a54c684d21b5716e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\djerb\.android\build-cache\01cdc47969968fbae2a2b3d1eba0363001905576\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\djerb\.android\build-cache\88691bd94a53c6b89ce09b9dad1fe704924506c0\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\djerb\.android\build-cache\4e906ad8299fe02b43c1d5505a1d3c3b0343ea35\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\djerb\.android\build-cache\331e79a4f4a98e8c7fab734ad4dfdca90f2c5cfd\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\djerb\.android\build-cache\3d0f9f09f8e6d5ca149f46f33de9ab05fec13075\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\djerb\.android\build-cache\1133545d87363e36af63e1134d2448abfd54bbe5\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\djerb\.android\build-cache\1388786c0bfa7ad5bd39c4504991c97e27162d53\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:27:9-41
+	android:allowBackup
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:26:18-44
+	android:icon
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:28:9-45
+	android:theme
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:29:9-45
+activity#com.example.android.camera2basic.CameraActivity
+ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:31:9-37:20
+	android:label
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:32:19-51
+	android:name
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:31:19-49
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:33:13-36:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:34:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml:35:27-74
+uses-sdk
+INJECTED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:support-v13:25.3.1] C:\Users\djerb\.android\build-cache\c4ea94314dd1dd2fd1598732e49a5d5926b55f5f\output\AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\djerb\.android\build-cache\0adeb6ce4f853c5562fc0f2ca06ef793c88f8533\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\djerb\.android\build-cache\5bac31b6edf8968bd9b93a174d37a57177bec152\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\djerb\.android\build-cache\24cc1948e743eb539c149c53a54c684d21b5716e\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\djerb\.android\build-cache\01cdc47969968fbae2a2b3d1eba0363001905576\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\djerb\.android\build-cache\88691bd94a53c6b89ce09b9dad1fe704924506c0\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\djerb\.android\build-cache\4e906ad8299fe02b43c1d5505a1d3c3b0343ea35\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\djerb\.android\build-cache\331e79a4f4a98e8c7fab734ad4dfdca90f2c5cfd\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\djerb\.android\build-cache\3d0f9f09f8e6d5ca149f46f33de9ab05fec13075\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\djerb\.android\build-cache\1133545d87363e36af63e1134d2448abfd54bbe5\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\djerb\.android\build-cache\1388786c0bfa7ad5bd39c4504991c97e27162d53\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v13:25.3.1] C:\Users\djerb\.android\build-cache\c4ea94314dd1dd2fd1598732e49a5d5926b55f5f\output\AndroidManifest.xml:23:9-52
+	android:targetSdkVersion
+		INJECTED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\djerb\AndroidStudioProjects\3DMaterialscan\Application\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v13:25.3.1] C:\Users\djerb\.android\build-cache\c4ea94314dd1dd2fd1598732e49a5d5926b55f5f\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\djerb\.android\build-cache\0adeb6ce4f853c5562fc0f2ca06ef793c88f8533\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\djerb\.android\build-cache\5bac31b6edf8968bd9b93a174d37a57177bec152\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\djerb\.android\build-cache\24cc1948e743eb539c149c53a54c684d21b5716e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\djerb\.android\build-cache\01cdc47969968fbae2a2b3d1eba0363001905576\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\djerb\.android\build-cache\88691bd94a53c6b89ce09b9dad1fe704924506c0\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\djerb\.android\build-cache\4e906ad8299fe02b43c1d5505a1d3c3b0343ea35\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\djerb\.android\build-cache\331e79a4f4a98e8c7fab734ad4dfdca90f2c5cfd\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\djerb\.android\build-cache\3d0f9f09f8e6d5ca149f46f33de9ab05fec13075\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\djerb\.android\build-cache\1133545d87363e36af63e1134d2448abfd54bbe5\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\djerb\.android\build-cache\1388786c0bfa7ad5bd39c4504991c97e27162d53\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:support-v13:25.3.1] C:\Users\djerb\.android\build-cache\c4ea94314dd1dd2fd1598732e49a5d5926b55f5f\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:support-v13:25.3.1] C:\Users\djerb\.android\build-cache\c4ea94314dd1dd2fd1598732e49a5d5926b55f5f\output\AndroidManifest.xml:26:9-47

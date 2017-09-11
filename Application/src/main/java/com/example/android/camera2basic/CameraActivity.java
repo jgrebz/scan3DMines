@@ -20,7 +20,6 @@ import android.app.Activity;
 import android.os.Bundle;
 
 public class CameraActivity extends Activity {
-    //Commentaire de test
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

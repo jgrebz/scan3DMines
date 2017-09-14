@@ -37,6 +37,11 @@ function save_seq(){
    wshShell.Run("getfiles.bat",0,true);
   }
 
+function init_seq(){
+   var wshShell = new ActiveXObject("WScript.Shell");
+   wshShell.Run("init_seq.bat",0,true);
+}
+
 </SCRIPT>
 </HEAD>
 <BODY>
@@ -44,5 +49,6 @@ function save_seq(){
    <button onclick="opencam();">Open camera</button>
    <button onclick="settings();">Settings</button>
    <button onclick="save_seq();">Save sequence</button>
+   <button onclick="init_seq();">Start sequence</button>
 </BODY>
 </HTML>

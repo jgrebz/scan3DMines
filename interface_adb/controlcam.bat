@@ -32,11 +32,17 @@ function opencam(){
    wshShell.Run("opencam.bat",0,true);
 }
 
+function save_seq(){
+   var wshShell = new ActiveXObject("WScript.Shell");
+   wshShell.Run("getfiles.bat",0,true);
+  }
+
 </SCRIPT>
 </HEAD>
 <BODY>
    <button onclick="wakeup();">Wake up phone</button>
    <button onclick="opencam();">Open camera</button>
    <button onclick="settings();">Settings</button>
+   <button onclick="save_seq();">Save sequence</button>
 </BODY>
 </HTML>

@@ -1,4 +1,4 @@
-<!-- :: Batch section
+﻿<!-- :: Batch section
 @echo off
 setlocal
 if not defined flag set "flag=1" & start "HTA" /MIN "%~F0" & goto :EOF
@@ -47,6 +47,16 @@ function save_seq(){
    wshShell.Run("getfiles.bat",0,true);
   }
 
+function calibration(){
+   var wshShell = new ActiveXObject("WScript.Shell");
+   wshShell.Run("calibration.bat",0,true);
+  }
+
+function acquisition(){
+   var wshShell = new ActiveXObject("WScript.Shell");
+   wshShell.Run("acquisition.bat",0,true);
+  }
+
 </SCRIPT>
 <meta charset="utf-8" />
     
@@ -83,55 +93,40 @@ function save_seq(){
 
                 <div class="row text-center pad-top">
 
-                  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-6">
-                      <div class="div-square">
-                      <!--button class="button" onclick=""-->
-                        <h4>Etape 1</h4>
-                        <p>Calibration du smartphone</p>
-                      <!--/button-->
-                      </div>
-                  </div> 
 
                   <div class="col-lg-1 col-md-1 col-sm-1 col-xs-6">
                       <div class="div-square">
-                      <button class="button" onclick="wakeup();">
-                      	<h4>Etape 2</h4>
-                        <p>Sortir de la mise en veille</p>
+                      <button class="button" onclick="calibration();">
+                        <h4>Etape 1</h4>
+                        <p>Calibration</p>
                       </button>
                       </div>
                   </div> 
-                 
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                      <div class="div-square">
-                      	<button class="button" onclick="opencam();">
-                      		<h4>Etape 3</h4>
-                          <p>Lancer l'appareil photo</p>
-                      	</button>
-                      </div>
-                  </div>
+
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
                         <button class="button" onclick="settings();">
-                      		<h4>Etape 4</h4>
+                      		<h4>Etape 2</h4>
                           <p>Réglages APN</p>
                       	</button>
                       </div>
                   </div>
 
+
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                        <!--button class="button" onclick=""-->
-                          <h4>Etape 5</h4>
+                        <button class="button" onclick="acquisition();">
+                          <h4>Etape 3</h4>
                           <p>Acquisition</p>
-                        <!--/button-->
+                        </button>
                       </div>
                   </div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
 						            <button class="button" onclick="save_seq();">
-                      		<h4>Etape 6</h4>
+                      		<h4>Etape 4</h4>
                           <p>Enregistrement de la séquence</p>
                       	</button>
                       </div>
@@ -140,7 +135,7 @@ function save_seq(){
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
                         <!--button class="button" onclick=""-->
-                          <h4>Etape 7</h4>
+                          <h4>Etape 5</h4>
                           <p>Intégration à Substance</p>
                         <!--/button-->
                       </div>

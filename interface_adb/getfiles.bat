@@ -1,12 +1,6 @@
 @echo off
 title Recuperation des fichiers
 
-:: --- Affichage de l'écran de l'android
-:: set PLAYER_PATH="C:\Users\djerb\Desktop\SCan3D\ffmpeg\bin\ffplay.exe"
-:: set PLAYER_PATH="C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"
-:: adb shell screenrecord --size=400x300 --output-format=h264 - | %PLAYER_PATH% - 
-:: adb shell "while true; do screenrecord --output-format=h264 --time-limit 5 -; done" | %PLAYER_PATH%
-:: adb shell screenrecord --output-format=h264 - | %PLAYER_PATH% 
 
 :: --- création d'un dossier d'export
 if not exist Scans mkdir Scans

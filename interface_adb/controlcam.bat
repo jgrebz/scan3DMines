@@ -45,9 +45,9 @@ function opencam(){
 function save_seq(){
   var nom_dossier = document.getElementById("nom_dossier").value;
   var programme = "getfiles.bat ";
-  var run = programme.concat(nom_dossier);
+  var run = programme+nom_dossier;
   var wshShell = new ActiveXObject("WScript.Shell");
-  wshShell.Run(run,1,true);
+  wshShell.Run(run,0,true);
   }
 
 function calibration(){
@@ -130,10 +130,10 @@ function acquisition(){
                       <div class="div-square">
                         <button class="button" onclick="save_seq();">
                           <h4>Etape 4</h4>
-                          <p>Enregistrement de la séquence</p>
+                          <p>Enregistrement de la séquence sous le nom :</p>
                         </button>
                         <form>
-                          <textarea id="nom_dossier" rows="1" cols="30">Nom du dossier de destination</textarea>
+                          <textarea id="nom_dossier" rows="1" col="30"></textarea>
                         </form>
                       </div>
                   </div>

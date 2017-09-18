@@ -30,6 +30,7 @@ for /f %%i in ('adb shell %CMD%') do (
 	IF !compteur! == 0 (
 	   set name=%%i
 	   set folder=!name:~4,18!
+	   if NOT "%1" == "" set folder="%1"
 	   if not exist !folder! (mkdir !folder!) else exit
 	   cd !folder!
 	   )

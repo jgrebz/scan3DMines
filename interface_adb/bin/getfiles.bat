@@ -3,6 +3,7 @@ title Recuperation des fichiers
 
 
 :: --- création d'un dossier d'export
+cd ..
 if not exist Scans mkdir Scans
 
 set DEVICE_DIR="/sdcard/DCIM/Camera/"
@@ -25,6 +26,7 @@ set compteur=0
 ::set /a indice_premiere_image=%nombre_de_fichiers%-%nombre_de_photos_prises%
 :: active la possibilité d'incrémenter des variables
 setlocal ENABLEDELAYEDEXPANSION
+
 cd Scans
 for /f %%i in ('adb shell %CMD%') do (
 	IF !compteur! == 0 (

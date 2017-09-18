@@ -32,14 +32,14 @@ function settings(){
    wshShell.Run("settings.bat",0,true);
 }
 
-function wakeup(){
-   var wshShell = new ActiveXObject("WScript.Shell");
-   wshShell.Run("wakeup.bat",0,true);
+function vysor(){
+   var oShell = new ActiveXObject("Shell.Application");
+   oShell.ShellExecute("Vysor.exe");
 }
 
-function opencam(){
-   var wshShell = new ActiveXObject("WScript.Shell");
-   wshShell.Run("opencam.bat",0,true);
+function arduino(){
+   var oShell = new ActiveXObject("Shell.Application");
+   oShell.ShellExecute("arduino.exe");
 }
 
 function save_seq(){
@@ -48,16 +48,6 @@ function save_seq(){
   var run = programme+nom_dossier;
   var wshShell = new ActiveXObject("WScript.Shell");
   wshShell.Run(run,0,true);
-  }
-
-function calibration(){
-   var wshShell = new ActiveXObject("WScript.Shell");
-   wshShell.Run("calibration.bat",0,true);
-  }
-
-function acquisition(){
-   var wshShell = new ActiveXObject("WScript.Shell");
-   wshShell.Run("acquisition.bat",0,true);
   }
 
 </SCRIPT>
@@ -99,29 +89,18 @@ function acquisition(){
 
                   <div class="col-lg-1 col-md-1 col-sm-1 col-xs-6">
                       <div class="div-square">
-                      <button class="button" onclick="calibration();">
+                      <button class="button" onclick="vysor();">
                         <h4>Etape 1</h4>
-                        <p>Calibration</p>
+                        <p>Ouvrir Vysor</p>
                       </button>
-                      </div>
-                  </div> 
-
-
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                      <div class="div-square">
-                        <button class="button" onclick="settings();">
-                      		<h4>Etape 2</h4>
-                          <p>Réglages APN</p>
-                      	</button>
                       </div>
                   </div>
 
-
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                        <button class="button" onclick="acquisition();">
-                          <h4>Etape 3</h4>
-                          <p>Acquisition</p>
+                        <button class="button" onclick="arduino();">
+                          <h4>Etape 2</h4>
+                          <p>Démarrer l'interface Arduino</p>
                         </button>
                       </div>
                   </div>
@@ -129,7 +108,7 @@ function acquisition(){
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
                         <button class="button" onclick="save_seq();">
-                          <h4>Etape 4</h4>
+                          <h4>Etape 3</h4>
                           <p>Enregistrement de la séquence sous le nom :</p>
                         </button>
                         <form>
@@ -141,7 +120,7 @@ function acquisition(){
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
                         <!--button class="button" onclick=""-->
-                          <h4>Etape 5</h4>
+                          <h4>Etape 4</h4>
                           <p>Intégration à Substance</p>
                         <!--/button-->
                       </div>

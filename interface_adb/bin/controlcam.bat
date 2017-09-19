@@ -27,11 +27,6 @@ exit
 <SCRIPT language="JavaScript">
 window.resizeTo(1000,900);
 
-function settings(){
-   var wshShell = new ActiveXObject("WScript.Shell");
-   wshShell.Run("settings.bat",0,true);
-}
-
 function vysor(){
    var oShell = new ActiveXObject("Shell.Application");
    oShell.ShellExecute("Vysor.exe");
@@ -40,6 +35,33 @@ function vysor(){
 function arduino(){
    var oShell = new ActiveXObject("Shell.Application");
    oShell.ShellExecute("arduino.exe");
+}
+
+function liste(){
+   var wshShell = new ActiveXObject("WScript.Shell");
+   var output = wshShell.Exec("cmd /c dir \"../Scans/\" /b").StdOut.readAll().split("\n");
+   var html_list = "<form method=\"post\"> <p> <select id=\"selected_folder\" name=\"menu_destination\">"
+   for (var i= 0; i < output.length - 1; i++) {
+   	 var name = output[i];
+	 html_list = html_list + "<option value=\"" + name + "\">" + name + "</option>";
+	 }
+   html_list = html_list + "</select> <input type=\"button\" value=\"Go\" onclick=\"load_seq()\" /> </p> </form>"
+   return html_list;
+}
+
+function show_seq(){
+   document.getElementById("list").innerHTML = liste();
+   document.getElementById("list").style.display = 'block';
+   document.getElementById("check_list").style.display = 'none';
+}
+
+function load_seq() {
+   var select = document.getElementById("selected_folder");
+   var folder = select.options[ select.selectedIndex ].value;
+   var wshShell = new ActiveXObject("WScript.Shell");
+   wshShell.Run("integration.bat "+folder,0,true);
+   document.getElementById("list").style.display = 'none';
+   document.getElementById("check_list").style.display = 'block';
 }
 
 function save_seq(){
@@ -89,30 +111,25 @@ function save_seq(){
 
                   <div class="col-lg-1 col-md-1 col-sm-1 col-xs-6">
                       <div class="div-square">
-                      <button class="button" onclick="vysor();">
                         <h4>Etape 1</h4>
-                        <p>Ouvrir Vysor</p>
-                      </button>
+			<input type="button" value="Ouvrir Vysor" onclick="vysor()" />
                       </div>
                   </div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                        <button class="button" onclick="arduino();">
                           <h4>Etape 2</h4>
-                          <p>Démarrer l'interface Arduino</p>
-                        </button>
+                          <input type="button" value="Ouvrir l'interface Arduino" onclick="arduino()" />
                       </div>
                   </div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">
-                        <button class="button" onclick="save_seq();">
                           <h4>Etape 3</h4>
                           <p>Enregistrement de la séquence sous le nom :</p>
-                        </button>
                         <form>
                           <textarea id="nom_dossier" rows="1" col="30"></textarea>
+			  <input type="button" value="OK" onclick="save_seq()" />
                         </form>
                       </div>
                   </div>
@@ -122,6 +139,8 @@ function save_seq(){
                         <!--button class="button" onclick=""-->
                           <h4>Etape 4</h4>
                           <p>Intégration à Substance</p>
+			  <div id="check_list"><input type="button" value="Chercher les sequences disponibles" onclick="show_seq()" /></div>
+			  <div id="list" style="display:none"><script>document.write(liste())</script></div>
                         <!--/button-->
                       </div>
                   </div>
@@ -141,7 +160,6 @@ function save_seq(){
                     Scanner de matériaux 3D mobile | octobre 2017 | SmartPixel | Mines-Paristech
             </div>
         </div>
-          
 
      <!-- /. WRAPPER  -->
     

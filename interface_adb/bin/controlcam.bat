@@ -25,7 +25,7 @@ exit
 
 <TITLE>Scanner 3D Mobile</TITLE>
 <SCRIPT language="JavaScript">
-window.resizeTo(1000,900);
+window.resizeTo(900,650);
 
 function vysor(){
    var oShell = new ActiveXObject("Shell.Application");
@@ -40,7 +40,7 @@ function arduino(){
 function liste(){
    var wshShell = new ActiveXObject("WScript.Shell");
    var output = wshShell.Exec("cmd /c dir \"../Scans/\" /b").StdOut.readAll().split("\n");
-   var html_list = "<form method=\"post\"> <p> <select id=\"selected_folder\" name=\"menu_destination\">"
+   var html_list = "<form method=\"post\"> <p> <select id=\"selected_folder\" name=\"menu_destination\"> <option value=\"Retour\">Retour</option>"
    for (var i= 0; i < output.length - 1; i++) {
    	 var name = output[i];
 	 html_list = html_list + "<option value=\"" + name + "\">" + name + "</option>";
@@ -58,8 +58,10 @@ function show_seq(){
 function load_seq() {
    var select = document.getElementById("selected_folder");
    var folder = select.options[ select.selectedIndex ].value;
-   var wshShell = new ActiveXObject("WScript.Shell");
-   wshShell.Run("integration.bat "+folder,0,true);
+   if (folder == "Retour") {
+      var wshShell = new ActiveXObject("WScript.Shell");
+      wshShell.Run("integration.bat "+folder,0,true);
+      }
    document.getElementById("list").style.display = 'none';
    document.getElementById("check_list").style.display = 'block';
 }

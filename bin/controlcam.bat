@@ -25,7 +25,7 @@ exit
 
 <TITLE>Scanner 3D Mobile</TITLE>
 <SCRIPT language="JavaScript">
-window.resizeTo(1000,700);
+window.resizeTo(1000,850);
 
 function vysor(){
    var oShell = new ActiveXObject("Shell.Application");
@@ -73,6 +73,14 @@ function save_seq(){
   var wshShell = new ActiveXObject("WScript.Shell");
   wshShell.Run(run,0,true);
   }
+
+function save_one(){
+  var nom_dossier = document.getElementById("nom_dossier2").value;
+  var programme = "getfile.bat ";
+  var run = programme+nom_dossier;
+  var wshShell = new ActiveXObject("WScript.Shell");
+  wshShell.Run(run,0,true);
+}
 
 </SCRIPT>
 <meta charset="utf-8" />
@@ -135,6 +143,17 @@ function save_seq(){
                         </form>
                       </div>
                   </div>
+
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+		      <div class="div-square">
+		          <h4>Etape 3b</h4>
+			  <p>Enregistrement de la photo pour l'opacité :</p>
+		     	  <form>
+			      <textarea id="nom_dossier2" rows="1" col="30"></textarea>
+			      <input type="button" value="OK" onclick="save_one()" />
+			  </form>
+		      </div>
+		  </div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">

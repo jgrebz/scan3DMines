@@ -33,7 +33,7 @@ for /f %%i in ('adb shell %CMD%') do (
 	   set name=%%i
 	   set folder=!name:~4,18!
 	   if NOT "%1" == "" set folder="%1"
-	   if not exist !folder! (mkdir !folder!) else exit
+	   if not exist !folder! (mkdir !folder!)
 	   cd !folder!
 	   )
 	adb pull "%DEVICE_DIR%%%i" "pic!compteur!.jpg"

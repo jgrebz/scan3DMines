@@ -12,3 +12,4 @@ copy Scans\%1\W.jpg substance\Smartscan.resources\Ds6044-W.png
 copy Scans\%1\SW.jpg substance\Smartscan.resources\nP6044-SW.png
 copy Scans\%1\S.jpg substance\Smartscan.resources\eS6044-S.png
 copy Scans\%1\SE.jpg substance\Smartscan.resources\NZ6044-SE.png
+copy Scans\%1\T.jpg substance\Smartscan.resources\YG8844-T.png

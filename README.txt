@@ -1,5 +1,5 @@
 --------------------------
-PRERECQUIS ET INSTALLATION
+PRÉREQUIS ET INSTALLATION
 --------------------------
 
 1. ADB
@@ -15,11 +15,23 @@ Un programme d'installation vous est fourni :
 		-Si la console affiche quelque chose commençant par "Android Debug Bridge", c'est bon, sinon ajoutez adb au path
 	d. Pour ajouter adb au path :
 		-Trouvez le dossier d'installation contenant "adb.exe", par exemple "C:\adb"
-		-Ajoutez ce dossier au pass en tapant dans la console 'setx path "%path%;path\to\adb"', par exemple 'setx path "%path%;C:\adb"'
+		-Ajoutez ce dossier au path en tapant dans la console 'setx path "%path%;path\to\adb"', par exemple 'setx path "%path%;C:\adb"'
 
 2. Substance
 
 Substance est nécessaire au traitement des photos afin d'obtenir la normal map et l'albedo.
+
+3. Téléphone en mode USB débogage
+
+Pour utiliser le programme, le téléphone Android doit être en mode USB débogage.
+	
+	a. Accédez aux paramètres de votre téléphone.
+	b. Dans l'onglet "A propos de l'appareil", trouvez l'objet "Numéro de version" ou "Build number".
+	c. Cliquez 7 fois sur cet objet.
+	d. L'appareil devrait vous indiquer que vous avez activé le mode développeur.
+	e. Revenez dans le menu précédent, un onglet "Options de développement" devrait être apparu.
+	f. Dans cet onglet, activez l'option "Débogage USB".
+
 
 -----------
 UTILISATION
@@ -58,9 +70,9 @@ UTILISATION
 		* si elle n'y est pas c'est qu'elle n'a pas fini de s'enregistrer, faites "Retour" et recommencez
 	d. Les ressources dans Substance Designer se mettent à jour automatiquement
 
-6. Paramètre sur Substance Designer
+6. Paramètres sur Substance Designer
 
-Certains paramètre du noeud Pics_to_maps peuvent être réglés par l'utilisateur :
+Certains paramètres du noeud Pics_to_maps peuvent être réglés par l'utilisateur :
 
 	-Dimensions_de_l_image_d_origine : largeur et hauteur (en pixel) de l'image d'origine, la valeur par défaut correspond au format des photos prises par le Motorola X1560
 

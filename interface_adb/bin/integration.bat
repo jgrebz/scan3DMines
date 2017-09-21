@@ -1,5 +1,9 @@
 cd ..
 
+cd substance
+if not exist Smartscan.resources mkdir Smartscan.resources
+cd ..
+
 copy Scans\%1\E.jpg substance\Smartscan.resources\vr6044-E.png
 copy Scans\%1\NE.jpg substance\Smartscan.resources\jf6044-NE.png
 copy Scans\%1\N.jpg substance\Smartscan.resources\xN6044-N.png

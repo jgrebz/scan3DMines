@@ -45,7 +45,7 @@ function liste(){
    	 var name = output[i];
 	 html_list = html_list + "<option value=\"" + name + "\">" + name + "</option>";
 	 }
-   html_list = html_list + "</select> <input type=\"button\" value=\"Go\" onclick=\"load_seq()\" /> </p> </form>"
+   html_list = html_list + "</select> <input type=\"button\" value=\"OK\" onclick=\"load_seq()\" /> </p> </form>"
    return html_list;
 }
 
@@ -58,7 +58,7 @@ function show_seq(){
 function load_seq() {
    var select = document.getElementById("selected_folder");
    var folder = select.options[ select.selectedIndex ].value;
-   if (folder == "Retour") {
+   if (folder != "Retour") {
       var wshShell = new ActiveXObject("WScript.Shell");
       wshShell.Run("integration.bat "+folder,0,true);
       }
@@ -66,10 +66,20 @@ function load_seq() {
    document.getElementById("check_list").style.display = 'block';
 }
 
-function save_seq(){
+function save_files(){
+  var select = document.getElementById("selected_type");
+  var type_files = select.options[ select.selectedIndex ].value;
   var nom_dossier = document.getElementById("nom_dossier").value;
-  var programme = "getfiles.bat ";
-  var run = programme+nom_dossier;
+  if (type_files == "S") {
+    var programme = "getfiles.bat ";
+    var run = programme+nom_dossier;
+  } else if (type_files == "O") {
+    var programme = "getfile.bat ";
+    var run = programme+nom_dossier+" T";
+  } else {
+    var programme = "getfile.bat ";
+    var run = programme+nom_dossier+" C";
+  }
   var wshShell = new ActiveXObject("WScript.Shell");
   wshShell.Run(run,0,true);
   }
@@ -137,23 +147,19 @@ function save_one(){
                       <div class="div-square">
                           <h4>Etape 3</h4>
                           <p>Enregistrement de la séquence sous le nom :</p>
+			  <p>
+			  <select id="selected_type" name="file_type">
+			  <option value="S">Séquence</option>
+			  <option value="O">Opacité</option>
+			  <option value="C">Couleur</option>
+			  </select>
+			  </p>
                         <form>
                           <textarea id="nom_dossier" rows="1" col="30"></textarea>
-			  <input type="button" value="OK" onclick="save_seq()" />
+			  <input type="button" value="OK" onclick="save_files()" />
                         </form>
                       </div>
                   </div>
-
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-		      <div class="div-square">
-		          <h4>Etape 3b</h4>
-			  <p>Enregistrement de la photo pour l'opacité :</p>
-		     	  <form>
-			      <textarea id="nom_dossier2" rows="1" col="30"></textarea>
-			      <input type="button" value="OK" onclick="save_one()" />
-			  </form>
-		      </div>
-		  </div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                       <div class="div-square">

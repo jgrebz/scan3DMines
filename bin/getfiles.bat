@@ -3,10 +3,10 @@ title Recuperation des fichiers
 
 
 :: --- création d'un dossier d'export
+set /p DEVICE_DIR= <DEVICE_DIR.txt
 cd ..
 if not exist Scans mkdir Scans
 
-set DEVICE_DIR="/sdcard/DCIM/Camera/"
 set CMD="ls -1 %DEVICE_DIR% | tail -n-8"
 ::set EXTENSION=".jpg"
 ::set nombre_de_fichiers=0

@@ -25,7 +25,7 @@ exit
 
 <TITLE>Scanner 3D Mobile</TITLE>
 <SCRIPT language="JavaScript">
-window.resizeTo(900,650);
+window.resizeTo(1000,700);
 
 function vysor(){
    var oShell = new ActiveXObject("Shell.Application");
@@ -34,7 +34,7 @@ function vysor(){
 
 function arduino(){
    var oShell = new ActiveXObject("Shell.Application");
-   oShell.ShellExecute("arduino.exe");
+   oShell.ShellExecute("Leo_priseV3.exe");
 }
 
 function liste(){

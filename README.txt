@@ -15,7 +15,8 @@ Un programme d'installation vous est fourni :
 		-Si la console affiche quelque chose commençant par "Android Debug Bridge", c'est bon, sinon ajoutez adb au path
 	d. Pour ajouter adb au path :
 		-Trouvez le dossier d'installation contenant "adb.exe", par exemple "C:\adb"
-		-Ajoutez ce dossier au path en tapant dans la console 'setx path "%path%;path\to\adb"', par exemple 'setx path "%path%;C:\adb"'
+		-Ajoutez ce dossier au path en tapant dans la console 'setx path "%path%;path\to\adb"',
+		par exemple 'setx path "%path%;C:\adb"'
 
 2. Substance
 
@@ -31,6 +32,15 @@ Pour utiliser le programme, le téléphone Android doit être en mode USB débogage.
 	d. L'appareil devrait vous indiquer que vous avez activé le mode développeur.
 	e. Revenez dans le menu précédent, un onglet "Options de développement" devrait être apparu.
 	f. Dans cet onglet, activez l'option "Débogage USB".
+
+4. Chemin de download des photographies
+
+Le programme récupère automatiquement les photographies à condition qu'elles soient stockées dans le répertoire "/sdcard/DCIM/Camera".
+Si ce dossier est modifié, le téléchargement des photos ne sera pas automatisé.
+
+Si l'utilisateur souhaite modifier ce fichier (par exemple si il change d'application photo) , il lui suffit de rentrer le nouveau nom
+dans le fichier "DEVICE_DIR.txt".
+Attention, ce nom doit être exact.
 
 
 -----------
@@ -74,13 +84,15 @@ UTILISATION
 
 Certains paramètres du noeud Pics_to_maps peuvent être réglés par l'utilisateur :
 
-	-Dimensions_de_l_image_d_origine : largeur et hauteur (en pixel) de l'image d'origine, la valeur par défaut correspond au format des photos prises par le Motorola X1560
+	-Dimensions_de_l_image_d_origine : largeur et hauteur (en pixel) de l'image d'origine, la valeur par défaut correspond au format
+	 des photos prises par le Motorola X1560
 
 	-Zoom : permet de zoomer sur une partie de l'image, 0 correspond au plus grand carré possible sur l'image, 1 correspond à 1 pixel
 		* attention le crop entraîne une diminution de la qualité de l'image, il est préférable de cadrer le scanner
 
 	-Décalage_de_l_image : permet de faire glisser l'image afin de centrer sur la zone d'intérêt
-		* le cadre ne peut pas sortir de l'image, en format portrait, si le crop est à 0 il n'y a pas de déplacement horizontal possible
+		* le cadre ne peut pas sortir de l'image, en format portrait, si le crop est à 0 il n'y a pas de déplacement horizontal 
+	possible
 
 	-Intensité : règle la saturation de la normal map, une valeur plus élevée accentue les reliefs
 

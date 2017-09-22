@@ -50,25 +50,33 @@ UTILISATION
 1. Préparation du téléphone
 
 	a. Votre téléphone doit être connecté par USB en mode debug à votre ordinateur.
-	b. Activez la connection Bluetooth et connectez vous à ""                                       ### à préciser
-	c. Placez le téléphone dans le scanner                                                          ### à préciser
+	b. Activez la connection Bluetooth et connectez vous à "ab shutter 3"
+	c. Placez le téléphone dans le scanner                                                          
 
 2. Calibration du scanner
 
 	a. Ouvrez la fenêtre de contrôle principale en exécutant "Smartscan.exe"
 	b. De cette fenêtre, ouvrez Vysor (ça peut prendre un peu de temps) et l'interface Arduino
-	c. Grâce à Vysor vous pouvez voir l'écran du téléphone et le contrôler depuis l'ordinateur
-	d. Ouvrez l'application caméra que vous voulez utiliser
-
-                                                                                                        ### à finir
+	c. Grâce à Vysor vous pouvez voir l'écran du téléphone et le contrôler depuis l'ordinateur. 
+L'interface Arduino permet de gérer l'allumage des lumières.
+	d. Ouvrez l'application caméra que vous souhaitez utiliser
+	e. Placez le plan approprié sur l'objet.
+	f. Alignez l'appareil photo sur le miroir: l'objectif doit être au milieu de l'écran.
+	g. Suivez la procédure de calibration décrite dans le PDF "calibration.pdf" dans le dossier 'Tips'
 
 3. Acquisition de la séquence
 
-                                                                                                        ### à faire
+	a. Pour lancer l'acquisition de 8 photos, cliquez sur le bouton "Lancer prises de vue" sur l'interface Arduino.
+	b. NE PAS BOUGER LE SYSTEME avant la fin de l'acquisition.
+	c. Pour ne prendre qu'une seule photo (mesure de transparence ou photo de calibration), l'utilisateur a la possibilité
+de n'allumer qu'une seule barre de LED. La photo unique doit être prise directement via l'interface du téléphone (via Vysor).
+
+                                                                                                       
 
 4. Enregistrement de la séquence
 
-	a. Sur la fenêtre principale, vous pouvez enregistrer la dernière séquence acquise
+	a. Sur la fenêtre principale, vous pouvez enregistrer la dernière séquence de 8 photos acquise (séquence) ou la dernière photo
+(calibration ou opacité).
 	b. Renseignez dans le champ approprié (Etape 3) le nom que vous voulez donner à la séquence
 	c. Validez en cliquant sur OK
 
@@ -78,7 +86,7 @@ UTILISATION
 	b. Cliquez sur "Cherchez les séquences disponibles" dans la fenêtre principale
 	c. Dans le menu déroulant qui s'affiche, sélectionnez la séquence que vous voulez charger et cliquez sur OK
 		* si elle n'y est pas c'est qu'elle n'a pas fini de s'enregistrer, faites "Retour" et recommencez
-	d. Les ressources dans Substance Designer se mettent à jour automatiquement
+	d. Les ressources dans Substance Designer se mettent à jour automatiquement, il n'est pas nécessaire de relancer Substance
 
 6. Paramètres sur Substance Designer
 

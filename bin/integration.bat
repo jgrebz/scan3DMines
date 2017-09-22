@@ -2,6 +2,7 @@ cd ..
 
 cd substance
 if not exist Smartscan.resources mkdir Smartscan.resources
+del /Q Smartscan.resources\*
 cd ..
 
 copy Scans\%1\E.jpg substance\Smartscan.resources\vr6044-E.png

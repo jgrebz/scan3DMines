@@ -39,14 +39,14 @@ for /f %%i in ('adb shell %CMD%') do (
 	adb pull "%DEVICE_DIR%%%i" "pic!compteur!.jpg"
 	set /a compteur+=1)
 
-rename pic0.jpg E.jpg
+rename pic0.jpg NW.jpg
 rename pic1.jpg N.jpg
-rename pic2.jpg W.jpg
-rename pic3.jpg S.jpg
-rename pic4.jpg NE.jpg
-rename pic5.jpg NW.jpg
+rename pic2.jpg NE.jpg
+rename pic3.jpg E.jpg
+rename pic4.jpg SE.jpg
+rename pic5.jpg S.jpg
 rename pic6.jpg SW.jpg
-rename pic7.jpg SE.jpg
+rename pic7.jpg W.jpg
 
 endlocal
 
